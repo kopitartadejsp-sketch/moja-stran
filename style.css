@@ -147,6 +147,8 @@ form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:34p
 .form-note{font-size:.82rem;color:var(--muted);margin-top:6px}
 .form-success{display:none;background:#eaf7ee;border:1px solid #b9e3c6;color:#1c6b38;
   padding:14px 18px;border-radius:8px;font-weight:600;margin-bottom:18px}
+.form-error{display:none;background:#fdecec;border:1px solid #f3b4b4;color:#9a2222;
+  padding:14px 18px;border-radius:8px;font-weight:600;margin-bottom:18px}
 
 /* Page hero (sub-pages) */
 .page-hero{background:linear-gradient(160deg,var(--navy),var(--steel));color:#fff;

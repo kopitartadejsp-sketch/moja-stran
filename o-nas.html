@@ -97,8 +97,13 @@
         </div>
       </div>
 
-      <form onsubmit="return sendForm(event)">
+      <form id="kontakt-form" onsubmit="return sendForm(event)">
+        <input type="hidden" name="access_key" value="74039f74-b745-43bc-9e05-96952642c588">
+        <input type="hidden" name="subject" value="Novo povpraševanje s strani vektor-studio.si">
+        <input type="hidden" name="from_name" value="Vektor Studio – spletni obrazec">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-success" id="ok">Hvala! Vaše sporočilo je bilo poslano. Oglasimo se v 24 urah.</div>
+        <div class="form-error" id="napaka">Sporočila ni bilo mogoče poslati. Poskusite znova ali pišite na info@vektor-studio.si.</div>
         <div class="field">
           <label for="ime">Ime in priimek *</label>
           <input type="text" id="ime" name="ime" required placeholder="Janez Novak">
@@ -161,9 +166,36 @@
 <script>
 function sendForm(e){
   e.preventDefault();
-  document.getElementById('ok').style.display='block';
-  e.target.reset();
-  document.getElementById('ok').scrollIntoView({behavior:'smooth',block:'center'});
+  var form = e.target;
+  var btn = form.querySelector('button[type="submit"]');
+  var ok = document.getElementById('ok');
+  var napaka = document.getElementById('napaka');
+  ok.style.display = 'none';
+  napaka.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Pošiljam...';
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(form)
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    if (data.success) {
+      ok.style.display = 'block';
+      form.reset();
+      ok.scrollIntoView({behavior:'smooth', block:'center'});
+    } else {
+      napaka.style.display = 'block';
+    }
+  })
+  .catch(function(){ napaka.style.display = 'block'; })
+  .finally(function(){
+    btn.disabled = false;
+    btn.textContent = 'Pošlji povpraševanje';
+  });
+
   return false;
 }
 </script>
