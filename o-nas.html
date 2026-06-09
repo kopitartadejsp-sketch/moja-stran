@@ -183,11 +183,11 @@ function sendForm(e){
   .then(function(r){ return r.json(); })
   .then(function(data){
     if (data.success) {
-      ok.style.display = 'block';
-      form.reset();
-      ok.scrollIntoView({behavior:'smooth', block:'center'});
+      window.location.href = 'hvala.html';
     } else {
       napaka.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Pošlji povpraševanje';
     }
   })
   .catch(function(){ napaka.style.display = 'block'; })
