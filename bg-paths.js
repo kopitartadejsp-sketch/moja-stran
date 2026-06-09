@@ -3,11 +3,36 @@
   if (!host) return;
 
   var NS = "http://www.w3.org/2000/svg";
+  var section = host.parentNode;
+
+  if (section) {
+    if (getComputedStyle(section).position === "static") section.style.position = "relative";
+    section.style.overflow = "hidden";
+    Array.prototype.forEach.call(section.children, function (ch) {
+      if (ch !== host) {
+        if (getComputedStyle(ch).position === "static") ch.style.position = "relative";
+        ch.style.zIndex = "2";
+      }
+    });
+  }
+
+  host.style.position = "absolute";
+  host.style.top = "0";
+  host.style.left = "0";
+  host.style.right = "0";
+  host.style.bottom = "0";
+  host.style.zIndex = "0";
+  host.style.pointerEvents = "none";
+  host.style.opacity = "0.85";
+
   var svg = document.createElementNS(NS, "svg");
   svg.setAttribute("viewBox", "0 0 696 316");
   svg.setAttribute("fill", "none");
   svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
   svg.setAttribute("aria-hidden", "true");
+  svg.style.width = "100%";
+  svg.style.height = "100%";
+  svg.style.display = "block";
   host.appendChild(svg);
 
   var reduce = window.matchMedia &&
@@ -41,11 +66,12 @@
       var period = len / 10;
       p.style.strokeDasharray = (period * 0.4).toFixed(2) + " " + (period * 0.6).toFixed(2);
 
-      if (!reduce) {
-        p.style.setProperty("--period", (reverse ? -period : period).toFixed(2) + "px");
-        var dur = (16 + Math.random() * 12).toFixed(1);
-        p.style.animation = "bgpFlow " + dur + "s linear infinite";
-        p.style.animationDelay = (-Math.random() * 12).toFixed(1) + "s";
+      if (!reduce && p.animate) {
+        var dur = (16 + Math.random() * 12) * 1000;
+        p.animate(
+          [{ strokeDashoffset: 0 }, { strokeDashoffset: (reverse ? -period : period) }],
+          { duration: dur, iterations: Infinity, easing: "linear", delay: -Math.random() * dur }
+        );
       }
     }
   }
