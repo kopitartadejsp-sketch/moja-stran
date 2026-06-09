@@ -188,21 +188,14 @@ footer p{color:#8e9bb2;font-size:.92rem;max-width:320px}
   section{padding:60px 0}
 }
 
-/* ===== Logo z naraščajočo črto nad napisom ===== */
-.logo{display:inline-flex;flex-direction:column;align-items:stretch;gap:5px;line-height:1}
-.logo .logo-txt{color:#fff;white-space:nowrap}
-.logo .logo-txt span{color:var(--accent)}
-.logo-line{width:100%;height:14px;overflow:visible;display:block}
-.lm-path{stroke-dasharray:190;stroke-dashoffset:190;animation:lmDraw 1.2s ease forwards .2s}
-.lm-arrow{stroke-dasharray:30;stroke-dashoffset:30;animation:lmDraw .5s ease forwards 1.1s}
-.lm-node{opacity:0;transform-box:fill-box;transform-origin:center;animation:lmPop .35s ease forwards}
-.lm-node:nth-of-type(1){animation-delay:.55s}
-.lm-node:nth-of-type(2){animation-delay:.85s}
-@keyframes lmDraw{to{stroke-dashoffset:0}}
-@keyframes lmPop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
-.logo:hover .logo-line{animation:lmBob .6s ease}
-@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
-footer .logo .logo-line{height:11px}
+/* ===== Logo: puščica neprekinjeno kroži okoli napisa ===== */
+.logo{display:inline-block;line-height:1}
+.logo-orbit{display:block;height:44px;width:auto;overflow:visible}
+.lm-word{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+  font-weight:800;font-size:22px;letter-spacing:-.02em;fill:#fff}
+.lm-word tspan{fill:var(--accent)}
+.lm-track{fill:none;stroke:rgba(255,255,255,.16);stroke-width:1.4}
+.lm-arrow-shape{fill:var(--accent)}
 
 /* ===== Animacije ob drsenju ===== */
 .anim-ready .reveal{opacity:0;transform:translateY(28px);
@@ -211,5 +204,5 @@ footer .logo .logo-line{height:11px}
 .card,.step,.price,.faq-item{will-change:transform,opacity}
 @media(prefers-reduced-motion:reduce){
   .anim-ready .reveal{opacity:1!important;transform:none!important;transition:none}
-  .lm-path,.lm-arrow,.lm-node{animation:none!important;stroke-dashoffset:0!important;opacity:1!important}
+  .lm-arrow-shape{display:none}
 }
