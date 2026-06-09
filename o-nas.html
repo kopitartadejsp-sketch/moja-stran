@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O nas in kontakt | WebStudio</title>
+<meta name="description" content="Spoznajte WebStudio, ekipo za izdelavo spletnih strani. Stopite v stik za brezplačno povpraševanje.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">Web<span>Studio</span></a>
+    <button class="burger" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="index.html">Domov</a>
+      <a href="cenik.html">Cenik</a>
+      <a href="o-nas.html" class="active">O nas</a>
+      <a href="#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Domov</a> / O nas</div>
+    <h1>O nas</h1>
+    <p>Smo majhna ekipa, ki podjetjem pomaga zrasti na spletu z dobro narejenimi spletnimi stranmi.</p>
+  </div>
+</section>
+
+<!-- ZGODBA -->
+<section>
+  <div class="container">
+    <div class="contact-wrap">
+      <div>
+        <span class="eyebrow">Naša zgodba</span>
+        <h2 style="margin-bottom:18px">Spletne strani z občutkom za podjetje</h2>
+        <p style="margin-bottom:16px">WebStudio je nastal z eno idejo: vsako podjetje si zasluži dobro spletno stran po pošteni ceni, ne glede na to, kako veliko je.</p>
+        <p style="margin-bottom:16px">Delamo z dobrim dizajnom in čisto kodo, predvsem pa pošteno. Z naročniki smo od prvega pogovora do objave, in ostanemo tudi potem, ko stran vzdržujemo in nadgrajujemo.</p>
+        <p>Ceno poveste vnaprej, na sporočila odgovorimo hitro, stran pa naredimo tako, da vam dejansko pripelje stranke.</p>
+      </div>
+      <div>
+        <div class="grid grid-2">
+          <div class="card text-center"><div class="amount" style="font-size:2rem;font-weight:800;color:var(--navy)">200+</div><p class="muted">izdelanih strani</p></div>
+          <div class="card text-center"><div class="amount" style="font-size:2rem;font-weight:800;color:var(--navy)">8 let</div><p class="muted">izkušenj</p></div>
+          <div class="card text-center"><div class="amount" style="font-size:2rem;font-weight:800;color:var(--navy)">24 h</div><p class="muted">odzivni čas</p></div>
+          <div class="card text-center"><div class="amount" style="font-size:2rem;font-weight:800;color:var(--navy)">98 %</div><p class="muted">zadovoljnih strank</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VREDNOTE -->
+<section class="band-light">
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="eyebrow">Naše vrednote</span>
+      <h2>Kako delamo</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">★</div><h3>Poštenost</h3><p>Jasne cene in iskrena komunikacija. Nikoli vam ne prodajamo nečesa, česar ne potrebujete.</p></div>
+      <div class="card"><div class="ico">⚡</div><h3>Hitrost</h3><p>Spoštujemo vaš čas. Roke dosegamo in vas sproti obveščamo o napredku.</p></div>
+      <div class="card"><div class="ico">♥</div><h3>Skrb po objavi</h3><p>Z vami ostanemo tudi po objavi strani. Vzdrževanje in podpora sta vedno na voljo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Pošljite povpraševanje</h2>
+      <p class="lead">Odgovorimo v 24 urah z okvirno ceno in predlogom.</p>
+    </div>
+    <div class="contact-wrap">
+      <div>
+        <div class="info-item">
+          <div class="ico">@</div>
+          <div><h4>E-pošta</h4><p><a href="mailto:info@webstudio.si">info@webstudio.si</a></p></div>
+        </div>
+        <div class="info-item">
+          <div class="ico">☎</div>
+          <div><h4>Telefon</h4><p><a href="tel:+38640123456">+386 40 123 456</a></p></div>
+        </div>
+        <div class="info-item">
+          <div class="ico">⌖</div>
+          <div><h4>Lokacija</h4><p>Ljubljana, Slovenija</p></div>
+        </div>
+        <div class="info-item">
+          <div class="ico">◷</div>
+          <div><h4>Delovni čas</h4><p>Pon–Pet, 9.00–17.00</p></div>
+        </div>
+      </div>
+
+      <form onsubmit="return sendForm(event)">
+        <div class="form-success" id="ok">Hvala! Vaše sporočilo je bilo poslano. Oglasimo se v 24 urah.</div>
+        <div class="field">
+          <label for="ime">Ime in priimek *</label>
+          <input type="text" id="ime" name="ime" required placeholder="Janez Novak">
+        </div>
+        <div class="field">
+          <label for="email">E-pošta *</label>
+          <input type="email" id="email" name="email" required placeholder="janez@email.si">
+        </div>
+        <div class="field">
+          <label for="paket">Zanima me</label>
+          <select id="paket" name="paket">
+            <option>Start – 200 €</option>
+            <option selected>Business – 500 €</option>
+            <option>Premium – 1000 €</option>
+            <option>Samo vzdrževanje</option>
+            <option>Še ne vem / svetovanje</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sporocilo">Sporočilo *</label>
+          <textarea id="sporocilo" name="sporocilo" required placeholder="Na kratko opišite vaš projekt..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Pošlji povpraševanje</button>
+        <p class="form-note">* S pošiljanjem soglašate, da vas kontaktiramo glede vašega povpraševanja.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Web<span style="color:var(--accent)">Studio</span></div>
+        <p>Izdelava in vzdrževanje profesionalnih spletnih strani za podjetja, obrtnike in samostojne podjetnike.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Povezave</h4>
+        <a href="index.html">Domov</a>
+        <a href="cenik.html">Cenik</a>
+        <a href="o-nas.html">O nas</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="mailto:info@webstudio.si">info@webstudio.si</a>
+        <a href="tel:+38640123456">+386 40 123 456</a>
+        <a href="#">Ljubljana, Slovenija</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 WebStudio. Vse pravice pridržane.</span>
+      <span>Izdelava spletnih strani Slovenija</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function sendForm(e){
+  e.preventDefault();
+  document.getElementById('ok').style.display='block';
+  e.target.reset();
+  document.getElementById('ok').scrollIntoView({behavior:'smooth',block:'center'});
+  return false;
+}
+</script>
+</body>
+</html>
