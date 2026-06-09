@@ -190,7 +190,7 @@ footer p{color:#8e9bb2;font-size:.92rem;max-width:320px}
 
 /* ===== Logo: puščica neprekinjeno kroži okoli napisa ===== */
 .logo{display:inline-block;line-height:1}
-.logo-orbit{display:block;height:44px;width:auto;overflow:visible}
+.logo-orbit{display:block;height:40px;width:186px;overflow:visible}
 .lm-word{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
   font-weight:800;font-size:22px;letter-spacing:-.02em;fill:#fff}
 .lm-word tspan{fill:var(--accent)}
