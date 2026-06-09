@@ -62,15 +62,11 @@
       p.setAttribute("stroke-width", (0.5 + i * 0.04).toFixed(2));
       svg.appendChild(p);
 
-      var len = p.getTotalLength();
-      var period = len / 10;
-      p.style.strokeDasharray = (period * 0.4).toFixed(2) + " " + (period * 0.6).toFixed(2);
-
       if (!reduce && p.animate) {
-        var dur = (16 + Math.random() * 12) * 1000;
+        var dur = (18 + Math.random() * 14) * 1000;
         p.animate(
-          [{ strokeDashoffset: 0 }, { strokeDashoffset: (reverse ? -period : period) }],
-          { duration: dur, iterations: Infinity, easing: "linear", delay: -Math.random() * dur }
+          [{ opacity: 0.35 }, { opacity: 1 }, { opacity: 0.35 }],
+          { duration: dur, iterations: Infinity, easing: "ease-in-out", delay: -Math.random() * dur }
         );
       }
     }
