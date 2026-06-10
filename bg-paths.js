@@ -61,17 +61,23 @@
         : "rgba(255,255,255," + op.toFixed(3) + ")");
       p.setAttribute("stroke-width", (0.5 + i * 0.04).toFixed(2));
       svg.appendChild(p);
-
-      if (!reduce && p.animate) {
-        var dur = (18 + Math.random() * 14) * 1000;
-        p.animate(
-          [{ opacity: 0.35 }, { opacity: 1 }, { opacity: 0.35 }],
-          { duration: dur, iterations: Infinity, easing: "ease-in-out", delay: -Math.random() * dur }
-        );
-      }
     }
   }
 
   build(1, false);
   build(-1, true);
+
+  // Eno samo, poceni gibanje celotnega ozadja prek transform (teče na GPU,
+  // brez prerisovanja vsak okvir -> ni štekanja). Statične črte = en izris.
+  if (!reduce && host.animate) {
+    host.style.willChange = "transform";
+    host.animate(
+      [
+        { transform: "translate3d(-1.2%,0,0) scale(1.04)" },
+        { transform: "translate3d(1.2%,0,0) scale(1.04)" },
+        { transform: "translate3d(-1.2%,0,0) scale(1.04)" }
+      ],
+      { duration: 26000, iterations: Infinity, easing: "ease-in-out" }
+    );
+  }
 })();
