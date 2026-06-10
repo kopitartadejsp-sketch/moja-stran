@@ -62,11 +62,10 @@
       p.setAttribute("stroke-width", (0.5 + i * 0.04).toFixed(2));
       svg.appendChild(p);
 
-      // Viden utrip, a samo na vsaki 3. črti -> manj animacij = brez štekanja.
-      if (!reduce && p.animate && i % 3 === 0) {
-        var dur = (16 + Math.random() * 12) * 1000;
+      if (!reduce && p.animate) {
+        var dur = (18 + Math.random() * 14) * 1000;
         p.animate(
-          [{ opacity: 0.4 }, { opacity: 1 }, { opacity: 0.4 }],
+          [{ opacity: 0.35 }, { opacity: 1 }, { opacity: 0.35 }],
           { duration: dur, iterations: Infinity, easing: "ease-in-out", delay: -Math.random() * dur }
         );
       }
