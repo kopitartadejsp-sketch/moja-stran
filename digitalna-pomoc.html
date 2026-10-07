@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digitalna pomoč | Vektor Studio</title>
+<meta name="description" content="Vaš digitalni sosed: spletne strani, popravila telefonov, tablic in konzol ter potrpežljiva IT pomoč. Vse digitalno na enem mestu.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo" aria-label="Vektor Studio"><svg class="logo-orbit" width="186" height="40" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vektor Studio"><path id="lm-track" class="lm-track" d="M26,3 H214 A23,23 0 0 1 214,49 H26 A23,23 0 0 1 26,3 Z" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.4"/><text class="lm-word" x="120" y="33" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5" fill="#ffffff">Vektor <tspan fill="#c9a14a">Studio</tspan></text><path class="lm-arrow-shape" d="M-6,-4 L6,0 L-6,4 Z" fill="#c9a14a"><animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#lm-track"/></animateMotion></path></svg></a>
+    <button class="burger" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="index.html">Domov</a>
+      <a href="cenik.html">Cenik</a>
+      <a href="digitalna-pomoc.html" class="active">Digitalna pomoč</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="o-nas.html#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Domov</a> / Digitalna pomoč</div>
+    <h1>Vaš digitalni sosed</h1>
+    <p>Ista roka, ki vam zgradi spletno stran, vam popravi tudi telefon in po domače razloži, kako vse skupaj deluje. En zaupanja vreden naslov za vse digitalno.</p>
+  </div>
+</section>
+
+<!-- POVEZOVALNA ZGODBA: DVA SVETOVA, EN PARTNER -->
+<section>
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="eyebrow">Dva svetova, en partner</span>
+      <h2>Splet vas najde, naprave vas poganjajo</h2>
+      <p class="lead">Spletna stran je vaša izložba, telefon in računalnik pa orodji, s katerima posel teče. Ko eno od tega zataji, zastane vse. Zato pri nas dobite oboje na istem mestu.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="ico">🌐</div>
+        <h3>Na spletu</h3>
+        <p>Da vas stranke najdejo in vam zaupajo.</p>
+        <p style="margin-top:12px">Izdelava spletnih strani, SEO optimizacija in mesečno vzdrževanje. <span style="color:var(--accent);font-weight:600">od 199 €</span></p>
+        <a href="cenik.html" class="btn btn-dark" style="margin-top:18px">Poglej cenik strani</a>
+      </div>
+      <div class="card">
+        <div class="ico">🛠️</div>
+        <h3>V vaših rokah</h3>
+        <p>Da naprave, s katerimi delate, vedno delujejo.</p>
+        <p style="margin-top:12px">Popravila telefonov, tablic in konzol ter potrpežljiva IT pomoč. <span style="color:var(--accent);font-weight:600">od 15 € / uro</span></p>
+        <a href="#popravila" class="btn btn-primary" style="margin-top:18px">Poglej popravila</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPRAVILA -->
+<section class="band-light" id="popravila">
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="eyebrow">Popravila & IT pomoč</span>
+      <h2>Kaj popravimo in pri čem pomagamo</h2>
+      <p class="lead">Cene so okvirne in odvisne od okvare. Pred popravilom vedno dobite jasno ceno in brezplačno oceno.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="ico">📱</div>
+        <h3>Popravilo telefonov</h3>
+        <p>Menjava razbitega ekrana, baterije, polnilnega konektorja, kamere in odprava programskih napak.</p>
+        <div style="margin-top:16px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--accent)">od 40 €</div>
+      </div>
+      <div class="card">
+        <div class="ico">▣</div>
+        <h3>Popravilo tablic</h3>
+        <p>Zamenjava ekrana in baterije, težave s polnjenjem, počasno delovanje in ponastavitve.</p>
+        <div style="margin-top:16px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--accent)">od 45 €</div>
+      </div>
+      <div class="card">
+        <div class="ico">🎮</div>
+        <h3>Popravilo igralnih konzol</h3>
+        <p>PlayStation, Xbox in Nintendo: čiščenje, pregrevanje, menjava HDMI vrat in ventilatorjev.</p>
+        <div style="margin-top:16px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--accent)">od 35 €</div>
+      </div>
+      <div class="card">
+        <div class="ico">🤝</div>
+        <h3>IT pomoč starejšim</h3>
+        <p>Nastavitev telefona in računalnika, e-pošta, varnost, video klici in potrpežljivo učenje uporabe.</p>
+        <div style="margin-top:16px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--accent)">od 15 € / uro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAKAJ -->
+<section>
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="eyebrow">Zakaj k nam</span>
+      <h2>Ena oseba, ki ji lahko zaupate za vse</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">✓</div><h3>Brezplačna ocena</h3><p>Ceno in smiselnost popravila poveste vnaprej, brez obveznosti.</p></div>
+      <div class="card"><div class="ico">⚡</div><h3>Hitro in lokalno</h3><p>Večino popravil opravimo v 1 do 3 dneh, pogosto še isti dan.</p></div>
+      <div class="card"><div class="ico">♥</div><h3>Po domače razloženo</h3><p>Brez zapletenih izrazov. Še posebej potrpežljivi smo s starejšimi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="band-light">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Spletna stran ali pokvarjena naprava?</h2>
+      <p>Pokličite, povejte kaj potrebujete, in za oboje poskrbimo na enem mestu.</p>
+      <a href="tel:+38631783956" class="btn btn-primary">Pokliči 031 783 956</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Vektor <span style="color:var(--accent)">Studio</span></div>
+        <p>Vaš digitalni sosed: spletne strani, popravila naprav in potrpežljiva IT pomoč na enem mestu.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Povezave</h4>
+        <a href="index.html">Domov</a>
+        <a href="cenik.html">Cenik</a>
+        <a href="digitalna-pomoc.html">Digitalna pomoč</a>
+        <a href="o-nas.html">O nas</a>
+        <a href="o-nas.html#kontakt">Kontakt</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="mailto:info@vektor-studio.si">info@vektor-studio.si</a>
+        <a href="tel:+38631783956">+386 31 783 956</a>
+        <a href="#">Ljubljana, Slovenija</a>
+        <a href="piskotki.html">Politika piškotkov</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Vektor Studio. Vse pravice pridržane.</span>
+      <span>Izdelava spletnih strani Slovenija</span>
+    </div>
+  </div>
+</footer>
+
+<script src="cookies.js"></script>
+<script src="anim.js"></script>
+</body>
+</html>
