@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function(){try{var s=localStorage.getItem('lang');
+if(s==='en'){location.replace('index-en.html');return;}
+if(!s){var l=(navigator.language||navigator.userLanguage||'').toLowerCase();if(l.indexOf('sl')!==0){location.replace('index-en.html');}}
+}catch(e){}})();
+</script>
 <title>Vektor Studio | Spletne strani, popravila naprav in IT pomoč</title>
 <meta name="description" content="Vektor Studio: izdelava spletnih strani, popravila telefonov, tablic in konzol ter IT pomoč. Vse digitalno na enem mestu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +35,8 @@
   .nav-links a:hover{color:var(--gold)}
   .nav-cta{border:1px solid var(--gold);color:var(--gold)!important;padding:10px 20px}
   .nav-cta:hover{background:var(--gold);color:#1a1613!important}
+  .lang{font-size:.78rem;letter-spacing:.08em;color:var(--muted)!important}
+  .lang b{color:var(--gold)}
   .burger{display:none;background:none;border:0;color:#efe9df;font-size:1.7rem;cursor:pointer}
 
   /* HERO */
@@ -111,6 +119,7 @@
       <a href="cenik.html">Cenik</a>
       <a href="o-nas.html">O nas</a>
       <a href="https://calendly.com/kopitartadejsp/30min" target="_blank" rel="noopener" class="nav-cta">Rezerviraj</a>
+      <a href="index-en.html" onclick="localStorage.setItem('lang','en')" class="lang" aria-label="English"><b>SL</b> / EN</a>
     </nav>
   </div>
 </header>

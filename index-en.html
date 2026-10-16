@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function(){try{if(localStorage.getItem('lang')==='sl'){location.replace('index.html');}}catch(e){}})();
+</script>
+<title>Vektor Studio | Websites, device repair and IT help</title>
+<meta name="description" content="Vektor Studio: website design, phone, tablet and console repair, and IT help. Everything digital in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#131110;--bg2:#1c1917;--card:#211d1a;--line:#332e29;--gold:#cda45e;--gold2:#e0c07f;--ink:#efe9df;--muted:#a79f92}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#131110;color:#efe9df;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  h1,h2,h3{font-family:'Abril Fatface',Georgia,serif;font-weight:400;line-height:1.1}
+  .btn{display:inline-block;padding:15px 34px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-family:'Inter',sans-serif;transition:.25s;border:1px solid transparent;cursor:pointer}
+  .btn-gold{background:var(--gold);color:#1a1613}.btn-gold:hover{background:var(--gold2)}
+  .btn-out{border-color:var(--gold);color:var(--gold)}.btn-out:hover{background:var(--gold);color:#1a1613}
+  .eyebrow{display:inline-block;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  header{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:92px}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#e7e1d6;font-weight:500;transition:.2s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{border:1px solid var(--gold);color:var(--gold)!important;padding:10px 20px}
+  .nav-cta:hover{background:var(--gold);color:#1a1613!important}
+  .lang{font-size:.78rem;letter-spacing:.08em;color:var(--muted)!important}
+  .lang b{color:var(--gold)}
+  .burger{display:none;background:none;border:0;color:#efe9df;font-size:1.7rem;cursor:pointer}
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;
+    background:linear-gradient(#131110,#131110),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80') center/cover}
+  .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,9,8,.82),rgba(10,9,8,.55) 60%,rgba(10,9,8,.35)),linear-gradient(0deg,rgba(10,9,8,.85),transparent 45%)}
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-top:60px}
+  .hero h1{font-size:clamp(2.8rem,6.6vw,5.6rem);max-width:12ch;color:#fff}
+  .hero .rule{width:130px;height:2px;background:var(--gold);margin:30px 0 26px}
+  .hero .sub{font-size:1.2rem;color:#e2dbce;max-width:520px;margin-bottom:36px;font-weight:300}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+  .scrolldown{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:var(--gold);font-size:1.6rem;animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+  section.blk{padding:100px 0}
+  .band{background:var(--bg2)}
+  .sec-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3.1rem);color:#fff;margin-bottom:16px}
+  .sec-head p{color:var(--muted);font-size:1.1rem;font-weight:300}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .card{background:var(--card);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+  .card .ph{aspect-ratio:16/10;overflow:hidden;background:#000}
+  .card .ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .card:hover .ph img{transform:scale(1.05)}
+  .card .bd{padding:32px 30px 34px;display:flex;flex-direction:column;flex:1}
+  .card h3{color:#fff;font-size:1.7rem;margin-bottom:12px}
+  .card p{color:var(--muted);margin-bottom:16px}
+  .card ul{list-style:none;margin:0 0 22px}
+  .card li{padding:8px 0 8px 22px;position:relative;border-bottom:1px solid var(--line);color:#d9d2c6;font-size:.96rem}
+  .card li:last-child{border-bottom:0}
+  .card li::before{content:"—";position:absolute;left:0;color:var(--gold)}
+  .price{font-family:'Abril Fatface',serif;font-size:1.7rem;color:var(--gold)}
+  .cardfoot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .pf{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .tile{position:relative;aspect-ratio:4/3;overflow:hidden;display:block;background:#000}
+  .tile img{width:100%;height:100%;object-fit:cover;transition:.5s;opacity:.72}
+  .tile:hover img{transform:scale(1.06);opacity:.5}
+  .tile span{position:absolute;left:18px;bottom:16px;z-index:2;font-family:'Abril Fatface',serif;font-size:1.3rem;color:#fff}
+  .tile .ov{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(10,9,8,.75),transparent 60%)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+  .stats .n{font-family:'Abril Fatface',serif;font-size:2.8rem;color:var(--gold)}
+  .stats small{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+  .cta{text-align:center;max-width:640px;margin:0 auto}
+  .cta h2{font-size:clamp(2rem,4.4vw,3rem);color:#fff;margin-bottom:16px}
+  .cta p{color:var(--muted);margin-bottom:28px}
+  footer{background:#0f0d0c;border-top:1px solid var(--line);padding:56px 0 30px;color:var(--muted);font-size:.92rem}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:38px}
+  footer h4{color:#efe9df;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;font-family:'Inter',sans-serif}
+  footer a{display:block;padding:5px 0;color:var(--muted)}footer a:hover{color:var(--gold)}
+  .foot-logo{font-family:'Abril Fatface',serif;font-size:1.5rem;color:#fff;margin-bottom:12px}
+  .foot-logo span{color:var(--gold)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem}
+  @media(max-width:860px){
+    .nav-links{display:none}.burger{display:block}
+    .grid2,.pf,.stats,.foot-grid{grid-template-columns:1fr}
+    .hero .sub{font-size:1.08rem}
+    section.blk{padding:72px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index-en.html" aria-label="Vektor Studio"><svg width="186" height="40" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vektor Studio"><text x="6" y="33" font-family="'Abril Fatface',Georgia,serif" font-size="26" fill="#ffffff">Vektor <tspan fill="#cda45e">Studio</tspan></text></svg></a>
+    <button class="burger" onclick="document.getElementById('nl').style.display=(document.getElementById('nl').style.display==='flex'?'none':'flex')">☰</button>
+    <nav class="nav-links" id="nl">
+      <a href="index-en.html">Home</a>
+      <a href="cenik.html">Pricing</a>
+      <a href="o-nas.html">About</a>
+      <a href="https://calendly.com/kopitartadejsp/30min" target="_blank" rel="noopener" class="nav-cta">Book a call</a>
+      <a href="index.html" onclick="localStorage.setItem('lang','sl')" class="lang" aria-label="Slovensko">SL / <b>EN</b></a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80">
+    <source src="https://videos.pexels.com/video-files/2887463/2887463-hd_1920_1080_25fps.mp4" type="video/mp4">
+  </video>
+  <div class="hero-ov"></div>
+  <div class="wrap">
+    <span class="eyebrow">Tech support · Slovenia</span>
+    <h1>Everything digital in one place</h1>
+    <div class="rule"></div>
+    <p class="sub">Website design, phone, tablet and console repair, and IT help.</p>
+    <div class="hero-btns">
+      <a href="https://calendly.com/kopitartadejsp/30min" target="_blank" rel="noopener" class="btn btn-gold">Book a free call</a>
+      <a href="#services" class="btn btn-out">See services</a>
+    </div>
+  </div>
+  <a href="#services" class="scrolldown" aria-label="Scroll down">↓</a>
+</section>
+
+<!-- SERVICES -->
+<section class="blk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our services</span>
+      <h2>Two fields, one provider</h2>
+      <p>Besides building websites, we repair devices and help with IT problems. One address for both, with the price agreed upfront.</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Websites" onerror="this.parentNode.style.display='none'"></div>
+        <div class="bd">
+          <h3>Websites</h3>
+          <p>We build your site, optimise it for Google and keep it maintained.</p>
+          <ul>
+            <li>Website design</li>
+            <li>SEO optimisation</li>
+            <li>Monthly maintenance</li>
+          </ul>
+          <div class="cardfoot"><span class="price">from €199</span><a href="cenik.html" class="btn btn-out">See pricing</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Repairs and IT help" onerror="this.parentNode.style.display='none'"></div>
+        <div class="bd">
+          <h3>Repairs & IT help</h3>
+          <p>We fix a device or help with an IT issue. The estimate is free and you know the price before any work.</p>
+          <ul>
+            <li>Phone repair <span style="color:var(--muted)">(from €40)</span></li>
+            <li>Tablet repair <span style="color:var(--muted)">(from €45)</span></li>
+            <li>Game consoles <span style="color:var(--muted)">(from €35)</span></li>
+            <li>Computer help <span style="color:var(--muted)">(from €15/hr)</span></li>
+          </ul>
+          <div class="cardfoot"><span class="price">free estimate</span><a href="https://calendly.com/kopitartadejsp/30min" target="_blank" rel="noopener" class="btn btn-gold">Book a slot</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="blk band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our work</span>
+      <h2>Examples of our websites</h2>
+      <p>Sample designs for different industries. Click an example to view it live.</p>
+    </div>
+    <div class="pf">
+      <a class="tile" href="frizer.html" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=640&q=80" alt=""><div class="ov"></div><span>Hair salon</span></a>
+      <a class="tile" href="gostinstvo.html" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=640&q=80" alt=""><div class="ov"></div><span>Restaurant</span></a>
+      <a class="tile" href="obrtnik.html" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=640&q=80" alt=""><div class="ov"></div><span>Tradesperson</span></a>
+      <a class="tile" href="kmetija.html" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=640&q=80" alt=""><div class="ov"></div><span>Tourist farm</span></a>
+      <a class="tile" href="trgovina.html" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=640&q=80" alt=""><div class="ov"></div><span>Online store</span></a>
+      <a class="tile" href="osebna.html" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=640&q=80" alt=""><div class="ov"></div><span>Personal brand</span></a>
+    </div>
+    <div style="text-align:center;margin-top:44px"><a href="portfolio.html" class="btn btn-out">See all examples</a></div>
+  </div>
+</section>
+
+<!-- WHY / STATS -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why us</span>
+      <h2>Reliable, clear, fast</h2>
+    </div>
+    <div class="stats">
+      <div><div class="n">from €199</div><small>website</small></div>
+      <div><div class="n">1–3 days</div><small>most repairs</small></div>
+      <div><div class="n">free</div><small>estimate & advice</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="blk band">
+  <div class="wrap">
+    <div class="cta">
+      <span class="eyebrow">Contact</span>
+      <h2>Need a website or a repair?</h2>
+      <p>Book a free call or give us a ring. You'll know the price upfront.</p>
+      <a href="https://calendly.com/kopitartadejsp/30min" target="_blank" rel="noopener" class="btn btn-gold">Book a free call</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Vektor <span>Studio</span></div>
+        <p>Website design, phone, tablet and console repair, and computer help. Everything in one place.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="index-en.html">Home</a>
+        <a href="cenik.html">Pricing</a>
+        <a href="o-nas.html">About</a>
+        <a href="portfolio.html">Examples</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@vektor-studio.si">info@vektor-studio.si</a>
+        <a href="tel:+38631783956">+386 31 783 956</a>
+        <a href="#">Ljubljana, Slovenia</a>
+        <a href="piskotki.html">Cookie policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Vektor Studio. All rights reserved.</span>
+      <span>Web design Slovenia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="cookies.js"></script>
+</body>
+</html>
