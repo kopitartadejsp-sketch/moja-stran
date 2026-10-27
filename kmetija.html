@@ -47,12 +47,27 @@
   footer{background:#161e17;color:#94a18d;padding:50px 0 28px;text-align:center;font-size:.9rem}
   footer .logo{margin-bottom:10px}
   @media(max-width:820px){.about,.grid,.gallery{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.links{display:none}}
+  .rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .room{background:#fff;border-radius:16px;padding:30px 26px}
+  .room h3{font-size:1.6rem}.room .pr{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:#3a5a40;margin:8px 0}
+  .room .pr small{font-family:'Inter',sans-serif;font-size:.85rem;color:#6a7a66}
+  .room ul{list-style:none;color:#4a5a48;font-size:.95rem}.room li{padding:4px 0;border-bottom:1px dashed #dfe3d3}
+  .terms{max-width:760px;margin:30px auto 0;color:#4a5a48;font-size:.92rem;text-align:center}
+  .book{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;background:#1f2a20;color:#f5f2e9;border-radius:20px;padding:56px 44px}
+  .book h2{color:#fff;margin-bottom:14px}.book p{color:#cdd5c8}
+  .book form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .book label{display:block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#cdd5c8;margin-bottom:6px}
+  .book input,.book select,.book textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #44563f;background:#2a382b;color:#fff;font:inherit}
+  .book .full{grid-column:1/-1}
+  .book .done{display:none;grid-column:1/-1;background:#3a5a40;color:#fff;border-radius:12px;padding:16px;text-align:center}
+  .langs{margin-top:18px;font-size:.85rem;color:#d8c98c;letter-spacing:.08em}
+  @media(max-width:820px){.rooms,.book{grid-template-columns:1fr}.book form{grid-template-columns:1fr}.book{padding:40px 22px}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
   <a href="#" class="logo">Zelena <b>dolina</b></a>
-  <div class="links"><a href="#zgodba">O kmetiji</a><a href="#ponudba">Ponudba</a><a href="#galerija">Galerija</a><a href="#kontakt">Rezervacija</a></div>
+  <div class="links"><a href="#zgodba">O kmetiji</a><a href="#ponudba">Ponudba</a><a href="#cenik">Cenik</a><a href="#galerija">Galerija</a><a href="#kontakt">Rezervacija</a></div>
   <a href="#kontakt" class="btn btn-green">Rezerviraj</a>
 </nav></div></header>
 
@@ -67,7 +82,7 @@
 </div></section>
 
 <section id="zgodba"><div class="wrap"><div class="about">
-  <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=700&q=80" alt="Narava" onerror="this.style.display='none'">
+  <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=700&q=80" alt="Travniki in gozd okoli kmetije" onerror="this.style.display='none'">
   <div>
     <span class="eyebrow" style="color:#3a5a40">Naša zgodba</span>
     <h2>Kmetija, ki diha z naravo</h2>
@@ -85,20 +100,43 @@
   </div>
 </div></section>
 
+<section id="cenik"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow" style="color:#3a5a40">Cenik 2026</span><h2>Nastanitev in doživetja</h2></div>
+  <div class="rooms">
+    <div class="room"><h3>Dvoposteljna soba</h3><div class="pr">68 €<small> / noč za 2 osebi</small></div><ul><li>Lastna kopalnica</li><li>Domači zajtrk vključen</li><li>Pogled na dolino</li></ul></div>
+    <div class="room"><h3>Družinski apartma</h3><div class="pr">95 €<small> / noč do 4 osebe</small></div><ul><li>2 spalnici in kuhinjica</li><li>Domači zajtrk vključen</li><li>Otroška posteljica brezplačno</li></ul></div>
+    <div class="room"><h3>Doživetja</h3><div class="pr">od 12 €<small> / osebo</small></div><ul><li>Hranjenje živali za otroke</li><li>Vodeni pohod s piknikom</li><li>Degustacija domačih izdelkov</li></ul></div>
+  </div>
+  <p class="terms">Turistična taksa ni vključena. Minimalno bivanje 2 noči v poletni sezoni. Brezplačna odpoved do 7 dni pred prihodom.</p>
+</div></section>
+
 <section id="galerija"><div class="wrap">
   <div class="sec-head"><span class="eyebrow" style="color:#3a5a40">Galerija</span><h2>Utrinki s kmetije</h2></div>
   <div class="gallery">
-    <div><img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=400&q=80" alt="" onerror="this.style.display='none'"></div>
-    <div><img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=400&q=80" alt="" onerror="this.style.display='none'"></div>
-    <div><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=400&q=80" alt="" onerror="this.style.display='none'"></div>
-    <div><img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?auto=format&fit=crop&w=400&q=80" alt="" onerror="this.style.display='none'"></div>
+    <div><img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=400&q=80" alt="Pogled na kmetijo" onerror="this.style.display='none'"></div>
+    <div><img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=400&q=80" alt="Domača hrana z vrta" onerror="this.style.display='none'"></div>
+    <div><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=400&q=80" alt="Živali na kmetiji" onerror="this.style.display='none'"></div>
+    <div><img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?auto=format&fit=crop&w=400&q=80" alt="Pohodna pot nad dolino" onerror="this.style.display='none'"></div>
   </div>
 </div></section>
 
-<section style="background:#eef0e3" id="kontakt"><div class="wrap"><div class="cta">
-  <h2>Rezervirajte svoj oddih</h2>
-  <p>Pokličite ali pišite, z veseljem vam pripravimo termin.</p>
-  <a href="tel:+38640000000" class="btn btn-green">Pokliči 040 000 000</a>
+<section style="background:#eef0e3" id="kontakt"><div class="wrap"><div class="book">
+  <div>
+    <h2>Rezervirajte svoj oddih</h2>
+    <p>Izberite termin in pošljite povpraševanje. Odgovorimo v 24 urah s potrditvijo in ceno. Lahko tudi pokličete: <a href="tel:+38640000000" style="color:#fff;font-weight:600">040 000 000</a></p>
+    <p class="langs">Govorimo: slovensko · English · Deutsch</p>
+  </div>
+  <form id="bookForm">
+    <div><label for="b-in">Prihod</label><input id="b-in" type="date" required></div>
+    <div><label for="b-out">Odhod</label><input id="b-out" type="date" required></div>
+    <div><label for="b-room">Nastanitev</label><select id="b-room"><option>Dvoposteljna soba</option><option>Družinski apartma</option></select></div>
+    <div><label for="b-ppl">Število oseb</label><select id="b-ppl"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+    <div><label for="b-name">Ime in priimek</label><input id="b-name" type="text" placeholder="Janez Novak" required></div>
+    <div><label for="b-mail">E-pošta</label><input id="b-mail" type="email" placeholder="janez@email.si" required></div>
+    <div class="full"><label for="b-msg">Sporočilo (neobvezno)</label><textarea id="b-msg" rows="3" placeholder="npr. prihajamo s psom, želimo degustacijo"></textarea></div>
+    <button class="btn btn-green full" type="submit">Pošlji povpraševanje</button>
+    <div class="done" id="bookDone" role="status">Hvala! To je vzorčna stran, v pravi različici povpraševanje pade naravnost na e-pošto kmetije.</div>
+  </form>
 </div></div></section>
 
 <footer><div class="wrap">
@@ -106,5 +144,10 @@
   <p>Primer 3, 1000 Ljubljana · 040 000 000</p>
   <p style="margin-top:8px;color:#6d7a67">Vzorčna stran · izdelava Vektor Studio</p>
 </div></footer>
+<script>
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('bookDone').style.display='block';});
+var t=new Date().toISOString().slice(0,10),i=document.getElementById('b-in'),o=document.getElementById('b-out');i.min=t;o.min=t;
+i.addEventListener('change',function(){o.min=i.value;if(o.value&&o.value<=i.value)o.value='';});
+</script>
 </body>
 </html>
